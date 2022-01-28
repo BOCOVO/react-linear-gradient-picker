@@ -30,6 +30,7 @@ const mapPaletteToStops = ({ palette, activeId, width }) => palette.map((color) 
 
 const getPaletteColor = (palette, id) => {
 	const color = palette.find(color => color.id === id);
+	if(!color) return {}
 	return { ...color, offset: Number(color.offset) };
 };
 
